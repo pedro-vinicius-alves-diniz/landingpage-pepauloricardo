@@ -1,0 +1,143 @@
+.navbar{
+    width: 100%;
+    padding: 1em 2em;
+    background-image: url('../../img/background.png');
+    background-size: cover;
+}
+
+.navbar-content{
+    // width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    .fa-solid.fa-user.fa-2x{
+        display: none;
+    }
+
+    i.fa-solid.fa-bars.fa-2x{
+        color: $white-dark;
+        transition: animation .4s ease;
+    }
+
+    i.fa-solid.fa-bars.fa-2x:hover{
+        animation: hoverAnimaMenu .4s infinite alternate;
+    }
+
+    span{
+        background-image: url('../img/background-text.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-clip: text;
+        color: transparent;
+        
+
+        font-family: $poppins;
+        font-weight: bold;
+        font-size: 1.3em;
+    }
+
+    a{
+        background-color: $white-dark;
+        box-shadow: 0px 0px 5px black;
+        
+        // border: 0.1em solid #D22120;
+        border-radius: 8px;
+        
+        padding: 0.4em 0.6em ;
+
+        transition: animation .3s ease;
+    }
+
+    a:hover{
+        animation: hoverAnima .4s infinite alternate; 
+    }
+
+    img{
+        max-width: 25em;
+    }
+}
+
+
+@keyframes hoverAnimaMenu{
+    from{
+        transform: scale(1);
+        color: $white-dark;
+    }
+    to{
+        transform: scale(1.1);
+        color: $white-normal;
+    }
+}
+
+@keyframes hoverAnima{
+    from{
+        transform: scale(1);
+        box-shadow: 0px 0px 5px black;
+    }
+    to{
+        transform: scale(1.1);
+        box-shadow: 0px 0px 7px $yellow-dark;
+
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    .navbar-content{
+        a{
+            display: none;
+        }
+
+        i{
+            font-size: 1.6em;
+        }
+
+        img{
+            width: 20em;
+        }
+
+        i.fa-solid.fa-user.fa-2x{
+            display: flex;
+            background-image: url('../img/background-text.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-clip: text;
+            color: transparent;
+        }
+
+        i.fa-solid.fa-user.fa-2x:hover{
+            animation: hoverAnimaLogin .4s infinite alternate; 
+        }
+    }
+
+    @keyframes hoverAnimaLogin{
+        from{
+            transform: scale(1);
+        }
+        to{
+            transform: scale(1.2);
+        }
+    }
+}
+
+@media screen and (max-width: 426px){
+    .navbar{
+        padding: 1em 1em;
+    }
+
+    .navbar-content{
+        i.fa-solid.fa-user.fa-2x{
+            display: none;
+        }
+
+        i.fa-solid.fa-bars.fa-2x{
+            font-size: 1.2em;
+        }
+
+        img{
+            width: 15em;
+        }
+        
+    }
+}
