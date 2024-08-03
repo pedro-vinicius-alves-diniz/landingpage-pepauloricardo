@@ -127,8 +127,9 @@
     }
 
     .navbar-content{
+
         i.fa-solid.fa-user.fa-2x{
-            display: none;
+           font-size: 1.2em;
         }
 
         i.fa-solid.fa-bars.fa-2x{
@@ -138,6 +139,13 @@
         img{
             width: 15em;
         }
-        
+    }
+}
+
+@media screen and (max-width: 325px){
+    .navbar-content{
+        i.fa-solid.fa-user.fa-2x{
+            display: none;
+        }
     }
 }

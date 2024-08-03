@@ -107,13 +107,18 @@
     padding: 1em 1em;
   }
   .navbar-content i.fa-solid.fa-user.fa-2x {
-    display: none;
+    font-size: 1.2em;
   }
   .navbar-content i.fa-solid.fa-bars.fa-2x {
     font-size: 1.2em;
   }
   .navbar-content img {
     width: 15em;
+  }
+}
+@media screen and (max-width: 325px) {
+  .navbar-content i.fa-solid.fa-user.fa-2x {
+    display: none;
   }
 }
 body {
