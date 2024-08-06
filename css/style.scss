@@ -8,11 +8,14 @@
 @import './partials/design';
 @import 'partials/header';
 @import 'partials/home';
+@import 'partials/about';
 
 body{
     width: 100%;
     height: 100vh;
     position: relative;
+    // background-image: url('../img/banner-home.png');
+    // background-size: cover;
 }
 
 a{
