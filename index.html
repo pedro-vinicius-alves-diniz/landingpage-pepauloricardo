@@ -12,7 +12,7 @@
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!--icones do font awesome cdn -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
@@ -40,36 +40,41 @@
         </section>
 
         <section id="about">
+
             <h2>Conheça os nossos módulos</h2>
 
             <div class="modules">
-                <div class="module historia">
-                    <h3>História da Igreja</h3>
-                    <!-- <img src="img/historia.jpg" alt="Historia da Igreja Cátolica"> -->
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt laudantium inventore aspernatur, temporibus dignissimos provident molestias excepturi quod incidunt voluptatum, itaque facere nemo aliquam? Illo minus asperiores quod laborum natus!</p>
-                </div>
-
-                <div class="module sacramentos">
-                    <h3>Os Sacramentos</h3>
-                    <!-- <img src="img/sacramentos.jpg" alt="Os Sacramentos"> -->
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt laudantium inventore aspernatur, temporibus dignissimos provident molestias excepturi quod incidunt voluptatum, itaque facere nemo aliquam? Illo minus asperiores quod laborum natus!</p>
-                </div>
-
-                <div class="module dogmas">
-                    <h3>Dogmas da Igreja Católica</h3>
-                    <!-- <img src="img/dogma.jpg" alt="Dogmas da Igreja Católica"> -->
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt laudantium inventore aspernatur, temporibus dignissimos provident molestias excepturi quod incidunt voluptatum, itaque facere nemo aliquam? Illo minus asperiores quod laborum natus!</p>
-                </div>
-
-                <div class="module sotoreologia">
-                    <h3>Sotoreologia</h3>
-                    <!-- <img src="img/sotoreologia.jpg" alt="Sotoreologia"> -->
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt laudantium inventore aspernatur, temporibus dignissimos provident molestias excepturi quod incidunt voluptatum, itaque facere nemo aliquam? Illo minus asperiores quod laborum natus!</p>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="img/historia.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="/img/sacramentos.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="/img/dogmas.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/davila.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/escatologia.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/padrepio.png" alt="">
+                      </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
+
         </section>
     </main>
 
-    <script src="js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="javascript/index.js"></script>
 </body>
 </html>

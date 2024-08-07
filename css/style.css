@@ -124,7 +124,7 @@
 }
 .home {
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   font-family: "Sedan", serif;
   overflow: hidden;
 }
@@ -212,6 +212,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
   min-height: 100vh;
   gap: 2em;
 }
@@ -227,72 +228,47 @@
   gap: 2em;
   margin-bottom: 3em;
 }
-#about .module {
-  width: 22%;
-  height: 25em;
+#about .modules .swiper {
+  width: 100%;
+  height: 100%;
+}
+#about .modules .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 3em;
-  border-radius: 12px;
-  box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
+  padding: 1em 0;
 }
-#about .module h3 {
-  background-image: url("../../img/background-text.png");
-  -webkit-background-clip: text;
-          background-clip: text;
-  color: transparent;
-  text-align: center;
-  margin-top: 0.7em;
-  font-size: 2em;
-}
-#about .module p {
-  color: #d9d9d9;
-  text-align: center;
-  padding: 0 1em;
-  font-size: 1.2em;
-}
-#about .module.historia {
-  background-image: url("../../img/historia.jpg");
-  background-size: cover;
-}
-#about .module.sacramentos {
-  background-image: url("../../img/sacramentos.jpg");
-  background-size: cover;
-}
-#about .module.dogmas {
-  background-image: url("../../img/dogma.jpg");
-  background-size: cover;
-}
-#about .module.sotoreologia {
-  background-image: url("../../img/sotoreologia.jpg");
-  background-size: cover;
-}
-@media screen and (max-width: 1140px) {
-  #about .modules {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  #about .module {
-    width: 40%;
-  }
+#about .modules .swiper-slide img {
+  display: block;
+  width: 432px;
+  height: 532px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+  max-width: 100%;
 }
 @media screen and (max-width: 768px) {
   #about .modules {
     flex-wrap: wrap;
     justify-content: center;
   }
-  #about .module {
-    width: 50%;
+  #about .modules .swiper {
+    width: 80%;
   }
 }
-@media screen and (max-width: 504px) {
+@media screen and (max-width: 426px) {
   #about h2 {
     text-align: center;
+    font-size: 2em;
   }
-  #about .module {
-    width: 70%;
+  #about .modules {
+    margin: auto;
+  }
+  #about .modules .swiper {
+    width: 100%;
   }
 }
 @media screen and (max-width: 320px) {
@@ -308,6 +284,7 @@ body {
   width: 100%;
   height: 100vh;
   position: relative;
+  min-width: 425px;
 }
 
 a {
