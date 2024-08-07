@@ -1,39 +1,125 @@
-#about{
-    width: 100%;
-    height: 100vh;
-    padding: 3em 0;
 
+#about{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 
+    // width: 100%;
+    min-height: 100vh;
+    gap: 2em;
+    margin-top: 1em;
+
+    // border: 0.1em solid red;
     h2{
         font-size: 2.5em;
         color: $yellow-dark;
-        padding-bottom: 1em;
+        font-weight: bold;
     }
 
+    .modules{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        gap: 2em;
+        margin-bottom: 3em;
+    }
 
     .module{
+        width: 22%;
+        height: 25em;
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 3em;
+        
+        border-radius: 12px;
+        box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
 
-        border: 0.1em solid red;
+        // border: 0.1em solid red;
 
         h3{
-            background-image: url('../../img/background-text-dark.png');
-            background-clip: text;
+            background-image: url('../../img/background-text.png');
+            background-clip: text; 
             color: transparent;
-            font-size: 1.5em;
+            text-align: center;
+
+            margin-top: 0.7em;
+            // margin-bottom: 2.5em;
+            font-size: 2em;
         }
+
+        p{
+            color: $white-dark;
+            text-align: center;   
+            padding: 0 1em;
+            font-size: 1.2em;
+        }
+
+    }
     
-        img{
-            width: 18em;
-        }
+    .module.historia{
+        background-image: url('../../img/historia.jpg');
+        background-size: cover;
+    }
+    .module.sacramentos{
+        background-image: url('../../img/sacramentos.jpg');
+        background-size: cover;
+        
+    }
+    .module.dogmas{
+        background-image: url('../../img/dogma.jpg');
+        background-size: cover;
 
         
     }
+    .module.sotoreologia{
+        background-image: url('../../img/sotoreologia.jpg');
+        background-size: cover;
+    }
+    
+    @media screen and (max-width: 1140px) {
+        .modules{
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .module{
+            width: 40%;
+        }
+    }
 
+    @media screen and (max-width: 768px) {
+        .modules{
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .module{
+            width: 50%;
+        }
+    }
+    @media screen and (max-width: 504px) {
+        h2{
+            text-align: center;
+        }
+
+        .module{
+            width: 70%;
+        }
+    }
+
+    @media screen and (max-width: 320px) {
+        h2{
+            font-size: 2em;
+        }
+
+        .module{
+            p{
+                font-size: 1em;
+            }
+        }
+    }
 }
+
+
 

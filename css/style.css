@@ -126,6 +126,7 @@
   width: 100%;
   height: calc(100vh - 76px);
   font-family: "Sedan", serif;
+  overflow: hidden;
 }
 
 .home-content {
@@ -135,7 +136,7 @@
   padding: 3em 3em;
   background-image: url("../../img/banner-home.png");
   background-size: cover;
-  height: 100%;
+  background-position: 100% 50%;
 }
 .home-content h1 {
   width: 50%;
@@ -171,12 +172,20 @@
   position: relative;
 }
 
+@media screen and (max-width: 1024px) {
+  .home-content h1 {
+    font-size: 2.5em;
+  }
+  .home-content p {
+    font-size: 1.5em;
+  }
+}
 @media screen and (max-width: 768px) {
   .home-content {
     background-position: 5%;
     padding: 3em 1.5em;
   }
-  .home-content h1, .home-content p {
+  .home-content h1 {
     width: 65%;
   }
 }
@@ -191,40 +200,108 @@
   }
   .home-content p {
     width: 100%;
-    font-size: 1.75em;
+    font-size: 1.3em;
   }
   .home-content a {
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
 }
 #about {
-  width: 100%;
-  height: 100vh;
-  padding: 3em 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 2em;
+  margin-top: 1em;
 }
 #about h2 {
   font-size: 2.5em;
   color: #C5932D;
-  padding-bottom: 1em;
+  font-weight: bold;
+}
+#about .modules {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 2em;
+  margin-bottom: 3em;
 }
 #about .module {
+  width: 22%;
+  height: 25em;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 0.1em solid red;
+  gap: 3em;
+  border-radius: 12px;
+  box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 #about .module h3 {
-  background-image: url("../../img/background-text-dark.png");
+  background-image: url("../../img/background-text.png");
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
-  font-size: 1.5em;
+  text-align: center;
+  margin-top: 0.7em;
+  font-size: 2em;
 }
-#about .module img {
-  width: 18em;
+#about .module p {
+  color: #d9d9d9;
+  text-align: center;
+  padding: 0 1em;
+  font-size: 1.2em;
+}
+#about .module.historia {
+  background-image: url("../../img/historia.jpg");
+  background-size: cover;
+}
+#about .module.sacramentos {
+  background-image: url("../../img/sacramentos.jpg");
+  background-size: cover;
+}
+#about .module.dogmas {
+  background-image: url("../../img/dogma.jpg");
+  background-size: cover;
+}
+#about .module.sotoreologia {
+  background-image: url("../../img/sotoreologia.jpg");
+  background-size: cover;
+}
+@media screen and (max-width: 1140px) {
+  #about .modules {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #about .module {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 768px) {
+  #about .modules {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #about .module {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 504px) {
+  #about h2 {
+    text-align: center;
+  }
+  #about .module {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 320px) {
+  #about h2 {
+    font-size: 2em;
+  }
+  #about .module p {
+    font-size: 1em;
+  }
 }
 
 body {
@@ -245,4 +322,10 @@ img {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 8px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }/*# sourceMappingURL=style.css.map */
