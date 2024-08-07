@@ -124,12 +124,13 @@
 }
 .home {
   width: 100%;
-  height: calc(100vh - 76px);
+  height: 90vh;
   font-family: "Sedan", serif;
   overflow: hidden;
 }
 
 .home-content {
+  height: 100%;
   display: flex;
   flex-direction: column;
   gap: 3em;
@@ -213,7 +214,6 @@
   justify-content: center;
   min-height: 100vh;
   gap: 2em;
-  margin-top: 1em;
 }
 #about h2 {
   font-size: 2.5em;
